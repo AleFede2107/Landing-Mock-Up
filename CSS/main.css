@@ -92,6 +92,7 @@ html {
   position: fixed;
   top: 2%;
   border-radius: 3vh;
+  z-index: 5;
 }
 
 .navFirstHalf,
@@ -202,7 +203,7 @@ html {
 }
 
 .card > .row > .icon {
-  background: var(--contrast_color);
+  background: var(--highlight_color);
   color: var(--ligth_base_color);
   border-radius: 50%;
   width: 10vh;
@@ -210,6 +211,8 @@ html {
   justify-content: center;
   align-items: center;
   margin: 1vh;
+  font-family: var(--text_font_1);
+  font-weight: 800;
 }
 
 .card > .row > .description {
@@ -258,7 +261,7 @@ input:checked + label .description {
 
 /* this is where section 1 starts */
 
-.makeUpContainer {
+.categoriesContainer {
   width: 100%;
   height: 90vh;
   display: flex;
@@ -268,7 +271,7 @@ input:checked + label .description {
   background-color: white;
 }
 
-.makeUpGrid {
+.categoriesGrid {
   width: 75%;
   height: 100%;
   display: grid;
@@ -280,22 +283,99 @@ input:checked + label .description {
     "image3 image3 image2";
 }
 
-.makeUpGrid img{
-    object-fit: cover;
+.categoriesGrid img {
+  object-fit: cover;
   height: 100%;
   width: 100%;
   box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.8);
+}
 
+.gridContent {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  top: -100%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--ligth_base_color);
+  font-family: var(--title_font_2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: 0.6s;
+}
+
+.gridContent:hover {
+  opacity: 1;
 }
 
 .gridItem1 {
-  grid-area: image1;
-}
-
-.gridItem2 {
   grid-area: image2;
 }
 
-.gridItem3 {
+.gridItem2 {
   grid-area: image3;
+}
+
+.gridItem3 {
+  grid-area: image1;
+}
+/* Products list section */
+
+.listContainer{
+    font-size: 1.5rem;
+    font-family: var(--title_font_1);
+    background-color: var(--dark_base_color);
+    padding: 4rem;
+}
+
+.shoes h1{
+    text-align: center;
+    margin-bottom: 4rem;
+    color: var(--ligth_base_color);
+    font-family: var(--title_font_2);
+    font-size: 4rem;
+    transition: all 0.3s;
+
+}
+
+.allShoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product{
+    overflow: hidden;
+    background-color: white;
+    color: var(--mid_gray);
+    text-align: center;
+    width: 240px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 50px;
+}
+
+.productsTitle, .productPrice{
+    margin-top: 0.8rem;
+}
+
+.productPrice{
+    color: var(--ligth_base_color);
+    background-color: var(--contrast_color);
+    padding: 4px;
+    border-radius: 20px;
+}
+
+a{
+    text-decoration: none;
 }
