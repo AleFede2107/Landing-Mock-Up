@@ -111,7 +111,7 @@ html {
 }
 
 .navSecondHalf {
-  width: 40%;
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -177,7 +177,7 @@ html {
 
 .container {
   height: 75vh;
-  width: 75%;
+  width: 90%;
   display: flex;
   flex-wrap: nowrap;
   justify-content: start;
@@ -414,4 +414,52 @@ a{
     padding: 0.1rem;
     font-family: var(--text_font_1);
     font-size: 1rem;
+}
+
+@media (min-width:789px) and (max-width: 1024px) and (orientation: landscape){
+  .navLink {
+    text-decoration: none;
+    color: var(--mid_gray);
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    font-size: 1rem;
+    font-family: var(--title_font_1);
+    font-weight: 600;
+  }
+  .gray{
+    display: none;
+  }
+  .red{
+    display: none !important;
+  }
+}
+
+@media (min-width:481px) and (max-width: 788px){
+  .navLink{
+    display: none;
+  }
+  .house img{
+    height: 20px;
+  }
+  .footer{
+    padding: 0.2rem;
+  }
+  .topic{
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:320px) and (max-width: 480px){
+  .navLink{
+    display: none;
+  }
+  .house img{
+    height: 20px;
+  }
+  .footer{
+    padding: 0.2rem;
+  }
+  .topic{
+    font-size: 1rem;
+  }
 }

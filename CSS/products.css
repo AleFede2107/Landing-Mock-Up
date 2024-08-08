@@ -111,7 +111,7 @@ html {
 }
 
 .navSecondHalf {
-  width: 40%;
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -233,6 +233,7 @@ html {
 .relatedWrapper{
   display: flex;
   align-items: center;
+  flex-direction: row;
 }
 
 .product{
@@ -269,4 +270,116 @@ html {
 
 a{
   text-decoration: none;
+}
+
+@media (min-width:789px) and (max-width: 1024px) and (orientation: landscape){
+  .navLink {
+    text-decoration: none;
+    color: var(--mid_gray);
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    font-size: 1rem;
+    font-family: var(--title_font_1);
+    font-weight: 600;
+  }
+
+  .gray{
+    display: none;
+  }
+  .red{
+    display: none !important;
+  }
+
+  .container{
+    padding: 10vh 5vw;
+  }
+  .wrapper{
+    width: 100%;
+  }
+  .productName{
+    font-size: 1.5rem;
+  }
+  .details{
+    font-size: 0.8rem;
+  }
+  .price{
+    font-size: 3rem;
+  }
+}
+
+@media (min-width:481px) and (max-width: 788px){
+  .navbar{
+    width: 100vw;
+  }
+  .navLink{
+    display: none;
+  }
+  .house img{
+    height: 20px;
+  }
+  .container{
+    width: 100vw;
+    padding: 10vh 5vw;
+  }
+  .relatedWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .wrapper{
+    width: 100%;
+  }
+  .productName{
+    font-size: 1rem;
+  }
+  .details{
+    font-size: 0.6rem;
+  }
+  .price{
+    font-size: 1rem;
+  }
+  .related{
+    padding: 0;
+  }
+  .product{
+    margin: 0.4rem;
+  }
+}
+
+@media (min-width:320px) and (max-width: 480px){
+  .navLink{
+    display: none;
+  }
+  .house img{
+    height: 20px;
+  }
+  .container{
+    width: 100vw;
+    padding: 10vh 5vw;
+  }
+  .wrapper{
+    width: 100%;
+  }
+  .productName{
+    font-size: 1rem;
+  }
+  .details{
+    font-size: 0.6rem;
+  }
+  .price{
+    font-size: 1rem;
+  }
+  .related{
+    padding: 0;
+  }
+  .product{
+    margin: 0.4rem;
+  }
+  .relatedWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
