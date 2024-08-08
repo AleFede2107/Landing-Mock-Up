@@ -93,6 +93,7 @@ html {
   top: 2%;
   border-radius: 3vh;
   z-index: 5;
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
 }
 
 .navFirstHalf,
@@ -268,7 +269,7 @@ input:checked + label .description {
   align-items: center;
   justify-content: center;
   padding: 10vh 0vh;
-  background-color: white;
+  background-color: var(--ligth_base_color);
 }
 
 .categoriesGrid {
@@ -332,7 +333,7 @@ input:checked + label .description {
     padding: 4rem;
 }
 
-.shoes h1{
+.shoes h1, .shirts h1{
     text-align: center;
     margin-bottom: 4rem;
     color: var(--ligth_base_color);
@@ -342,7 +343,7 @@ input:checked + label .description {
 
 }
 
-.allShoes{
+.allShoes, .allShirts{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -355,7 +356,7 @@ input:checked + label .description {
     color: var(--mid_gray);
     text-align: center;
     width: 240px;
-    height: 340px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -363,6 +364,10 @@ input:checked + label .description {
     padding: 1rem;
     margin: 1rem;
     border-radius: 50px;
+}
+
+.product img{
+    height: 120px;
 }
 
 .productsTitle, .productPrice{
@@ -376,6 +381,37 @@ input:checked + label .description {
     border-radius: 20px;
 }
 
+.shirts{
+    margin-top: 10vh;
+}
+
 a{
     text-decoration: none;
+}
+
+/* Here Starts The Footer */
+
+.footer{
+    padding: 3rem;
+    display: flex;
+    align-items: start;
+    text-align: center;
+    justify-content: space-around;
+    background-color: var(--ligth_base_color);
+}
+
+.topic{
+    font-family: var(--title_font_2);
+    font-size: 2rem;
+}
+
+.partition ul{
+    list-style: none;
+}
+
+.partition ul li p{
+    color: var(--mid_gray);
+    padding: 0.1rem;
+    font-family: var(--text_font_1);
+    font-size: 1rem;
 }
